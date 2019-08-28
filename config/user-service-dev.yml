@@ -1,10 +1,16 @@
 sp:
   user-service:
-    users: "[{\"id\":7, \"username\":\"abc\",\"password\":\"123\"},{\"id\":8, \"username\":\"def\",\"password\":\"456\"},{\"id\":9, \"username\":\"ghi\",\"password\":\"789\"}]"
+    users: "[{\"id\":7, \"username\":\"abc\",\"password\":\"123\"},{\"id\":8, \"username\":\"def\",\"password\":\"456\"},{\"id\":9, \"username\":\"ghi\",\"password\":\"789\"},{\"id\":99, \"username\":\"aaa\",\"password\":\"111\"}]"
 
 spring:
   application:
     name: user-service
+  rabbitmq:
+    host: 192.168.145.132
+    port: 5672
+    username: admin
+    password: admin
+    
     
 server:
   port: 8101
@@ -19,8 +25,3 @@ management:
     web:
       exposure:
         include: refresh
-        
-# 在末尾添加了一个新的用户数据
-sp:
-  user-service:
-    users: "[{\"id\":7, \"username\":\"abc\",\"password\":\"123\"},{\"id\":8, \"username\":\"def\",\"password\":\"456\"},{\"id\":9, \"username\":\"ghi\",\"password\":\"789\"},{\"id\":99, \"username\":\"aaa\",\"password\":\"111\"}]"
